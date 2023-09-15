@@ -1,3 +1,7 @@
+@font-face {
+    font-family: Dosis-Bold;
+    src: url("../fonts/static/Dosis-Bold.ttf");
+}
 /* 
     SELECTORES
 */
@@ -21,6 +25,7 @@ a{
 }
 
 footer p{
+    font-family: Dosis-Bold, 'Courier New', Courier, monospace;
     color: blue;
 }
 
@@ -32,6 +37,8 @@ footer p{
 
 #titulo{
     color: brown;
+    font-family: 'Mansalva', cursive;
+
 }
 
 /* Selectores de clase */
@@ -83,6 +90,17 @@ input[type="submit"]:hover{
 
 
 /* Selectores hijo */
-/* #menu > li > a{
+#menu > li > a{
     color: chartreuse;
+}
+
+/* Fondos */
+/* body{
+    background-color: #ccc;
+    background-image: url("./img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: right bottom;
+    color: wheat;
 } */
