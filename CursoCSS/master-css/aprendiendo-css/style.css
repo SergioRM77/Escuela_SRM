@@ -80,7 +80,9 @@ input[type="submit"]:hover{
     background: rgb(4, 69, 4);
 }
 
+
+
 /* Selectores hijo */
-#menu > li > a{
+/* #menu > li > a{
     color: chartreuse;
-}
+} */
