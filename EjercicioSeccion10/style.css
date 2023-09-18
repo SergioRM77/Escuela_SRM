@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.principal{
+    width: 1200px;
+    border: 1px solid black;
+    margin: 0px auto;
+    margin-top: 20px;
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(33, 33, 209);
+    text-align: center;
+    line-height: 90px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+.menu{
+    background-color: rgb(125, 117, 117);
+    height:50px;
+}
+.menu ul li{
+    /* display: inline-block; */
+    display: block;
+    float: left;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+}
+
+.menu ul li a{
+    color: black;
+}
+
+.menu ul li:hover{
+    background-color: #6b6a6a;
+    cursor: pointer;
+}
+.menu ul li:hover a{
+    color: white;
+}
+
+.contenido{
+    width: 70%;
+
+    float: left;
+}
+
+.contenido h2{
+    text-align: center;
+    background-color: #ccc;
+}
+.lateral{
+    width: 29%;
+    background-color: aliceblue;
+    border: 1px solid red;
+    height: 1000px;
+    float: left;
+    text-align: center;
+}
+
+.contenido .caja {
+    width: 40%;
+    height: 200px;
+    background-color: rgb(233, 114, 114);
+    border: 5px solid rgb(203, 122, 16);
+    float:  left;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+    line-height: 55px;
+    background-color: #b6b0b0;
+    text-align: center;
+    border: 2px solid rgb(85, 85, 85);
+}
+
