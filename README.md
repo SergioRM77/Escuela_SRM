@@ -13,3 +13,7 @@ pero pero es para practicar los commit con otra rama diferente de main
 ## Rama Responsive
 
 - Se ha añadido un nuevo ejercicio responsive, solo practicar el posicionamiento de cajas, nada estético por ahora
+
+## Rama FlexboxDesign
+
+- Añadido ejercicios con flexbox
