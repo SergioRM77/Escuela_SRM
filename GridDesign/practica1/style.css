@@ -1,0 +1,65 @@
+body{
+    text-align: center;
+}
+
+.layout{
+    width: 85%;
+    min-height: 600px;
+    margin: 0px auto;
+    display: grid;
+
+    /* Espacio entre elementos grid */
+    grid-gap: 10px;
+
+    /* Definir número de columnas */
+    /* grid-template-columns: calc(50% - 10px) calc(50% - 10px); */
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /* grid-template-columns: 25% 15% 35% 2%; */
+    /* grid-template-columns: repeat(2, 24%); */
+    grid-template-columns: 1fr 1fr 1fr ;
+
+    /* Definir el número de filas, los valores igual que colums */
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 50% 25% 15%; */
+
+
+    border: 3px solid orangered;
+}
+
+.layout .caja{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    
+    background-color: grey;
+}
+
+.layout .red{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: rgb(210, 77, 77);
+}
+.layout .green{
+    background-color: green;
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-row: 2 / 4;
+}
+.layout .blue{
+    background-color: rgb(85, 85, 214);
+}
+.layout .orange{
+    background-color: rgb(214, 158, 55);
+    grid-column: 3 / 4;
+}
+.layout .pink{
+    background-color: rgb(214, 85, 205);
+    grid-column: 2/ 3;
+    /* grid-row: 3 / 5; */
+}
+.layout .brown{
+    background-color: rgb(147, 73, 17);
+    grid-column: 1 / 5;
+}
