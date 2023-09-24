@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <script src="main.js" defer></script>
+    <style>
+        .tomate{
+            width: 50px; 
+            height: 50px;
+            background-color: tomato;
+            border: 1px solid black ;
+            float: left;
+            margin: 20px;
+            border-radius: 100px;
+        }
+        #huerto{
+            clear: both;
+            width: 90%;
+            height: 400px;
+            background-color: #ccc;
+            border: 5px black dashed;
+        }
+
+        .tomate img{
+            width: 45px;
+        }
+
+        #cesta{
+            width: 90%;
+            height: 100px;
+            background-color: #453827;
+            border: 5px black dashed;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drag and Drop</h1>
+<section id="cesta">
+    <div class="tomate" draggable="true">
+        <!-- <img src="tomate.png" title="tomate" alt=""> -->
+    </div>
+    <div class="tomate" draggable="true">
+        <!-- <img src="tomate.png" title="tomate" alt=""> -->
+    </div>
+    <div class="tomate" draggable="true">
+        <!-- <img src="tomate.png" title="tomate" alt=""> -->
+    </div>
+    <div class="tomate" draggable="true">
+        <!-- <img src="tomate.png" title="tomate" alt=""> -->
+    </div>
+
+</section>
+    
+    <section id="huerto"></section>
+</body>
+</html>
