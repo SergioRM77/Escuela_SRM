@@ -1,0 +1,24 @@
+<h4>Listado de personajes</h4>
+<ul class="list-group">
+  <!-- Poner llaves cuadradas es decirle a Angular que tome el control
+      que es código js -->
+  <li *ngFor="let character of characterList;
+      let indice = index;
+      let isPrimero = first;
+      let isUltimo = last;
+      let isPar = even;
+      let isImpar = odd;"
+    class="list-group-item d-flex justify-content-between"
+
+    [ngClass]="{
+      'list-group-item-success' : isPar,
+      'list-group-item-dark' : isPrimero,
+      'list-group-item-primary' : isUltimo
+
+    }">
+      {{indice+1}}. Nombre: {{character.name}} - Power: {{character.power}}.
+      <!-- Es el primero: {{isPrimero}}, es el último: {{isUltimo}} -->
+    <button class="btn btn-danger"
+        (click)="onDeleteCharacter(character.id)">X</button>
+  </li>
+</ul>

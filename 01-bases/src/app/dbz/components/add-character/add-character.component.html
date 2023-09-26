@@ -1,0 +1,12 @@
+<h3>Añadir personaje</h3>
+<p>( )-> para eventos, [ ] -> para atributos, [( )] -> para las dos cosas</p>
+<form (ngSubmit)="emitCharacter()" class="row">
+  <input type="text" [(ngModel)]="character.name" name="name" placeholder="Nombre" class="form-control my-2">
+  <input type="number"[(ngModel)]="character.power" name="power" placeholder="Poder" class="form-control my-2">
+  <!-- (click)="emitCharacter()" esto puede funcionar en el botón
+      pero lo más correcto es delegar ese trabajo al formulario
+      con ((ngSubmit)="" -->
+  <input type="submit"  name="" class="btn btn-primary">
+</form>
+
+<!-- <pre>{{character| json}}</pre> -->
