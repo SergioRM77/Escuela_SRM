@@ -1,0 +1,29 @@
+<form>
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="email" name="email"  placeholder="Correo" [(ngModel)]="email" class="form-control" />
+    <label class="form-label" >Correo</label>
+  </div>
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="password" name="password" placeholder="Contraseña" [(ngModel)]="password" class="form-control" />
+    <label class="form-label" >Contraseña</label>
+  </div>
+
+
+  <button
+    type="button"
+    class="btn btn-success btn-block m-4"
+    (click)="loginUser()">
+      Loguearse
+  </button>
+
+  <a
+    class="btn btn-primary btn-block m-4"
+    routerLink="/register">
+      Registrarse
+  </a>
+</form>
+
+

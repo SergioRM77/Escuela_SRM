@@ -1,0 +1,50 @@
+<h3>Ajustes de usuario</h3>
+<form>
+  <div class="form-outline mb-4">
+    <label class="form-label">Nombre completo</label>
+    <input type="text" name="name" [(ngModel)]="user.name" [value]="user.name" class="form-control" />
+  </div>
+  <div class="form-outline mb-4">
+    <label class="form-label">Edad</label>
+    <input type="number" name="age" [(ngModel)]="user.age" [value]="user.age" class="form-control" />
+  </div>
+  <div class="form-outline mb-4">
+    <label class="form-label">Color favorito</label>
+    <input type="text" name="color" [(ngModel)]="user.color" [value]="user.color" class="form-control" />
+  </div>
+  <div class="form-outline mb-4">
+    <label class="form-label px-4">Está trabajando?</label>
+    <input type="radio" name="isWork" [(ngModel)]="user.isWork" id="" value="si">
+    <label class="form-label px-2">Si</label>
+    <input type="radio" name="isWork" [(ngModel)]="user.isWork" [value]="false" id="">
+    <label class="form-label px-2">No</label>
+  </div>
+  <div class="form-outline mb-4">
+    <label class="form-label">Correo</label>
+    <input type="email" name="email" [(ngModel)]="user.email" [value]="user.email" class="form-control" />
+  </div>
+
+
+  <div class="form-outline mb-4">
+    <label class="form-label">Contraseña</label>
+    <input type="password" name="password" [(ngModel)]="user.password" class="form-control" />
+  </div>
+
+  <div class="form-outline mb-4">
+    <label class="form-label">Repetir Contraseña</label>
+    <input type="password" name="passwordConfirm" [(ngModel)]="passwordConfirm" (input)="checkValidation($event)" class="form-control" />
+  </div>
+
+  <button type="button" class="btn btn-success btn-block m-4" routerLink="/home" [ngClass]="pwdConfirm ? '' : 'disabled'" (click)="saveChangesUser()">
+    Guardar cambios
+  </button>
+
+  <a class="btn btn-primary btn-block m-4" routerLink="/home">
+    volver a Home
+  </a>
+
+  <button type="button" class="btn btn-danger btn-block m-4" (click)="deleteUser()">
+    Eliminar cuenta
+  </button>
+
+</form>
