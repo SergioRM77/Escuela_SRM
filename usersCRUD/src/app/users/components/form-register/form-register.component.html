@@ -3,24 +3,26 @@
     <input type="text" name="name" placeholder="" [(ngModel)]="user.name" class="form-control" />
     <label class="form-label">Nombre completo</label>
   </div>
-  <div class="form-floating mb-3 mt-3">
-    <input type="number" name="age" placeholder="" [(ngModel)]="user.age" class="form-control" />
-    <label class="form-label" >Edad</label>
-  </div>
-  <div class="form-floating mb-3 mt-3">
-    <input type="text" name="color" placeholder="" [(ngModel)]="user.color" class="form-control" />
-    <label class="form-label" >Color favorito</label>
+  <div class="d-flex justify-content-start">
+    <div class="form-floating mb-3 mt-3">
+      <input type="number" name="age" placeholder="" [(ngModel)]="user.age" class="form-control" />
+      <label class="form-label">Edad</label>
+    </div>
+    <div class="form-floating mb-3 mt-3 ms-2">
+      <input type="text" name="color" placeholder="" [(ngModel)]="user.color" class="form-control" />
+      <label class="form-label">Color favorito</label>
+    </div>
   </div>
   <div class="form-outline mb-4">
-    <label class="form-label px-4" >Está trabajando?</label>
-    <input type="radio" name="isWork" [(ngModel)]="user.isWork" id=""[value]="true">
-    <label class="form-label px-2" >Si</label>
-    <input type="radio" name="isWork" [(ngModel)]="user.isWork" [value]="false" id="">
-    <label class="form-label px-2" >No</label>
+    <label class="form-label px-4">Está trabajando?</label>
+    <input type="radio" name="isWork" [(ngModel)]="user.isWork" [value]="true">
+    <label class="form-label px-2">Si</label>
+    <input type="radio" name="isWork" [(ngModel)]="user.isWork" [value]="false">
+    <label class="form-label px-2">No</label>
   </div>
   <div class="form-floating mb-3 mt-3">
     <input type="email" name="email" placeholder="" [(ngModel)]="user.email" class="form-control" />
-    <label class="form-label" >Correo</label>
+    <label class="form-label">Correo</label>
   </div>
 
 
@@ -30,24 +32,18 @@
   </div>
 
   <div class="form-floating mb-3 mt-3">
-    <input type="password" name="passwordConfirm" placeholder="" [(ngModel)]="passwordConfirm" (input)="checkValidation($event)"  class="form-control" />
-    <label class="form-label" >Repetir Contraseña</label>
+    <input type="password" name="passwordConfirm" placeholder="" [(ngModel)]="passwordConfirm"
+      (input)="checkValidation($event)" class="form-control" />
+    <label class="form-label">Repetir Contraseña</label>
   </div>
 
-  <button
-    type="button"
-    class="btn btn-success btn-block m-4"
-    routerLink="/home"
-    (click)="saveUser()"
-    [ngClass]="pwdConfirm ? '' : 'disabled'" >
-      Registrarse
+  <button type="button" class="btn btn-success btn-block m-4 text-uppercase fw-bold" routerLink="/home" (click)="saveUser()"
+    [ngClass]="pwdConfirm ? '' : 'disabled'">
+    Registrarse
   </button>
 
-  <a
-    class="btn btn-primary btn-block m-4"
-    routerLink="/login">
-      login
+  <a class="btn btn-primary btn-block m-4 text-uppercase fw-bold" routerLink="/login">
+    login
   </a>
 
 </form>
-

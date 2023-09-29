@@ -1,18 +1,20 @@
-<h2></h2>
-<div class="card" >
+
+<div class="card col-sm-12 col-md-8 shadow" id="content-home">
   <div class="card-body">
-    <h5 class="card-title text-center">Datos del usuario</h5>
-    <ul>
-      <li class="list-group list-group-item text-primary">Nombre completo: <span>{{user.name}}</span></li>
-      <li class="list-group list-group-item text-primary">Edad: <span>{{user.age}}</span></li>
-      <li class="list-group list-group-item text-primary">Color favorito: <span>{{user.color}}</span></li>
-      <li class="list-group list-group-item text-primary">Estás trabajado: <span>{{user.isWork}}</span></li>
-      <li class="list-group list-group-item text-primary">Correo: <span>{{user.email}}</span></li>
+    <h5 class="card-title text-center text-uppercase">Datos del usuario</h5>
+    <ul class="table">
+      <li class="list-group list-group-item fw-bold bg-light">Nombre completo: <span class=" text-primary">{{user.name}}</span></li>
+      <li class="list-group list-group-item fw-bold">Edad: <span class=" text-primary">{{user.age}}</span></li>
+      <li class="list-group list-group-item fw-bold bg-light">Color favorito: <span class=" text-primary">{{user.color}}</span></li>
+      <li class="list-group list-group-item fw-bold">Estás trabajado: <span class=" text-primary">{{user.isWork ? "Si" : "No"}}</span></li>
+      <li class="list-group list-group-item fw-bold bg-light">Correo: <span class=" text-primary">{{user.email}}</span></li>
     </ul>
     </div>
+    <div class="d-flex justify-content-center">
+      <a
+          class="btn btn-primary btn-block m-4 text-uppercase fw-bold"
+          routerLink="/settings">
+            Ajustes
+        </a>
+    </div>
 </div>
-<a
-    class="btn btn-primary btn-block m-4"
-    routerLink="/settings">
-      Ir a ajustes
-  </a>

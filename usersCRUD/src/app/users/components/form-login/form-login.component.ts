@@ -6,9 +6,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'users-form-login',
   templateUrl: './form-login.component.html',
-  styles: [
-  ]
+  styleUrls: ['./form-login.css']
 })
+
 export class FormLoginComponent {
 
   public email!: string;
@@ -20,18 +20,16 @@ export class FormLoginComponent {
    }
 
   loginUser(){
-    this.validateUser();
+      this._userService.loginUserLS(this.email, this.password);
 
-    const userLS = this._userService.getUserLS();
-    if(userLS.email === this.email && userLS.password === this.password){
-      this._router.navigate(['/home']);
-    }
   }
 
-  private validateUser(){
-    if(!this._userService.getUserLS()){
-      this._router.navigate(['/register']);
+  private validateUser(): boolean {
+
+    if(this._userService.existUserLS(this.email)){
       alert('Usuario no registrado');
+      return false;
     }
+    return true;
   }
 }

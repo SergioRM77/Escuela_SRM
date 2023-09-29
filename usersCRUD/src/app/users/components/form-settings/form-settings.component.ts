@@ -27,7 +27,7 @@ export class FormSettingsComponent {
       console.log("Contraseñas no coinciden");
 
     }else{
-      this._userService.saveUserLS(this.user);
+      this._userService.saveChangesUserLS(this.user);
       console.log(this.user);
 
 
@@ -39,6 +39,10 @@ export class FormSettingsComponent {
     this.route.navigate(['login']);
   }
 
+  closeSession(){
+    this._userService.deleteSessionLS();
+    this.route.navigate(['login']);
+  }
 
   checkValidation(event: Event){
     const inputValue = (event.target as HTMLInputElement).value;
@@ -48,4 +52,5 @@ export class FormSettingsComponent {
       this.pwdConfirm = true;
     }
   }
+
 }
