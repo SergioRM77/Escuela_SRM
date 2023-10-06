@@ -1,0 +1,59 @@
+<h3 class="flex justify-content-center font-bold">{{(taskForm.value.id ? 'Editar Tarea' : 'Crear nueva Tarea') | uppercase}}</h3>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid justify-content-center">
+  <div class="col-12 sm:col-8">
+    <mat-card>
+      <mat-card-content>
+
+        <form [formGroup]="taskForm" class="grid" (ngSubmit)="onSubmit()">
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Nombre tarea</mat-label>
+
+            <input matInput type="text" required formControlName="title"/>
+          </mat-form-field>
+
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Creador</mat-label>
+
+            <input matInput type="text" required formControlName="creator"/>
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Prioridad</mat-label>
+            <mat-select required formControlName="typeTask">
+              <mat-option *ngFor="let item of typeTask"
+                [value]="item">
+                  {{item}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-12">
+            <mat-label>Descripción</mat-label>
+
+            <textarea matInput type="text" required formControlName="description"></textarea>
+          </mat-form-field>
+
+
+
+        </form>
+
+        <div class="flex justify-content-between">
+          <button (click)="alertOnDeletedTask()"
+            mat-flat-button color="warn"
+            *ngIf="taskForm.value.id">
+              Borrar
+          </button>
+          <span></span>
+          <button mat-flat-button color="primary" (click)="onSubmit()">
+            <mat-icon>save</mat-icon>{{taskForm.value.id ? 'Editar' : 'Guardar'}}
+          </button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+
+</div>

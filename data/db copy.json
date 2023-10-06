@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "id": "HtzK-1",
+      "title": "Tarea de prueba",
+      "description": "Descripción de la tarea",
+      "creator": "Sergio",
+      "date": "12/12/2023",
+      "typeTask": "normal"
+    },
+    {
+      "id": "HtzK-2",
+      "title": "Tarea de prueba 2",
+      "description": "Descripción de la tarea",
+      "creator": "Sergio",
+      "date": "13/12/2023",
+      "typeTask": "urgente"
+    },
+    {
+      "id": "HtzK-3",
+      "title": "Tarea de prueba 3",
+      "description": "Tarea de arreglar bug en código de inicio",
+      "creator": "Sergio",
+      "date": "25/12/2023",
+      "typeTask": "terminada"
+    },
+    {
+      "id": "mii5ZyZ",
+      "title": "Base de datos colgada",
+      "description": "la base de datos no responde, posible incompatibilidad en tipos",
+      "creator": "Sergio",
+      "date": "05/10/2023",
+      "typeTask": "urgente"
+    },
+    {
+      "id": "E0OsLAT",
+      "title": "arreglar sistema",
+      "description": "Pelusas en el SAI",
+      "creator": "Sergio",
+      "date": "05/10/2023",
+      "typeTask": "terminado"
+    }
+  ]
+}
