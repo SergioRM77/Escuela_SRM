@@ -1,0 +1,20 @@
+.card-mat-header-orange{
+  background-color: rgb(216, 149, 25);
+}
+.card-mat-body-orange{
+  background-color: rgb(245, 195, 101);
+}
+
+.card-mat-header-green{
+  background-color: rgb(159, 210, 48);
+}
+.card-mat-body-green{
+  background-color: rgb(180, 245, 101);
+}
+
+.card-mat-header-blue{
+  background-color: rgb(101, 202, 245);
+}
+.card-mat-body-blue{
+  background-color: rgb(181, 212, 232);
+}

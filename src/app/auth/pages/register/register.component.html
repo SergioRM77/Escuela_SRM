@@ -1,0 +1,48 @@
+<form class="flex flex-column" [formGroup]="myForm" (ngSubmit)="onSubmit()" autocomplete="off">
+  <span class="text-lg mb-4">Registrarse</span>
+
+  <mat-form-field>
+    <mat-label>Nombre de Usuario</mat-label>
+    <input type="text" matInput placeholder="Nombre de usuario" formControlName="name" required>
+    <span *ngIf="isValidField('name')" class="form-text text-danger">
+      El nombre (Alias) no es válido
+    </span>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>email</mat-label>
+    <input type="email" matInput placeholder="email" formControlName="email" required>
+    <span *ngIf="isValidField('email')" class="form-text text-danger">
+      El email no es válido
+    </span>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input type="password" matInput placeholder="Contraseña" formControlName="password" required>
+    <span *ngIf="isValidField('password')" class="form-text text-danger">
+      Las contraseñas no coinciden
+    </span>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Confirmar Contraseña</mat-label>
+    <input type="password" matInput placeholder="Confirm Contraseña" formControlName="password2" required>
+    <span *ngIf="isValidField('password2')" class="form-text text-danger">
+      Las contraseñas no coinciden
+    </span>
+  </mat-form-field>
+
+  <button mat-button mat-flat-button color="primary">
+    <mat-icon>save</mat-icon>
+    Registrar Usuario
+  </button>
+
+  <div class="flex justify-content-end mt-5">
+    <a routerLink="/auth/new-acount">¿No tienes cuenta?</a>
+  </div>
+</form>
+
+<p>Status: {{myForm.status | json}}</p>
+<p>Status name: {{myForm.controls['name'].valid | json}}</p>
+<p>Status email: {{myForm.controls['email'].valid | json}}</p>
+<p>Status password: {{myForm.controls['password'].valid | json}}</p>

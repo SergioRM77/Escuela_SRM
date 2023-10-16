@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "pepe",
+      "email": "pepe@pepe",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "name": "pepe2",
+      "email": "sergio93rm@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "HtzK-2",
+      "title": "Tarea de prueba 2",
+      "description": "Descripción de la tarea",
+      "creator": "Sergio",
+      "date": "13/12/2023",
+      "typeTask": "urgente"
+    },
+    {
+      "id": "HtzK-3",
+      "title": "Tarea de prueba 3",
+      "description": "Tarea de arreglar bug en código de inicio",
+      "creator": "Sergio",
+      "date": "25/12/2023",
+      "typeTask": "terminada"
+    },
+    {
+      "id": "mii5ZyZ",
+      "title": "Base de datos colgada",
+      "description": "la base de datos no responde, posible incompatibilidad en tipos",
+      "creator": "Sergio",
+      "date": "05/10/2023",
+      "typeTask": "urgente"
+    },
+    {
+      "id": "E0OsLAT",
+      "title": "arreglar sistema",
+      "description": "Pelusas en el SAI",
+      "creator": "Sergio",
+      "date": "05/10/2023",
+      "typeTask": "terminado"
+    },
+    {
+      "id": "wUrCo15",
+      "title": "Arreglar bug en cloud 2",
+      "description": "Se ha caído la nube",
+      "creator": "Sergio",
+      "date": "06/10/2023",
+      "typeTask": "urgente"
+    },
+    {
+      "id": "pGWLYwt",
+      "title": "Arreglar bug233",
+      "description": "arreglar bug233",
+      "creator": "Sergio",
+      "date": "06/10/2023",
+      "typeTask": "normal"
+    }
+  ]
+}

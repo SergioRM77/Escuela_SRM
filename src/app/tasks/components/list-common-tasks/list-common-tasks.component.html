@@ -1,0 +1,19 @@
+<div class="col-12">
+<mat-accordion>
+
+  <mat-expansion-panel panelOpenState = "true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{(selectedTypeTask ? selectedTypeTask : 'Todas las tareas') | uppercase}}
+      </mat-panel-title>
+      <mat-panel-description>
+        Número de tareas: {{numTasks}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-common-task *ngFor="let task of tasks"
+    [task]="task"></app-common-task>
+
+  </mat-expansion-panel>
+</mat-accordion>
+
+</div>

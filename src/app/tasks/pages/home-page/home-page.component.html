@@ -1,0 +1,14 @@
+<h3 class="flex justify-content-center font-bold">{{'Home'| uppercase}}</h3>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid justify-content-center">
+  <div class="col-12 sm:col-8 px-4 sm:px-0">
+
+    <app-list-common-tasks [selectedTypeTask]="'normal'"></app-list-common-tasks>
+    <app-list-common-tasks  [selectedTypeTask]="'urgente'"></app-list-common-tasks>
+    <app-list-common-tasks [selectedTypeTask]="'terminado'"></app-list-common-tasks>
+    <app-list-common-tasks></app-list-common-tasks>
+  </div>
+
+</div>

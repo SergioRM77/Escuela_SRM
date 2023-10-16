@@ -1,0 +1,30 @@
+<div class="">
+  <mat-card [ngClass]="colorCardHeader">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Título: {{task.title}}</mat-card-title>
+        <mat-card-subtitle>
+          {{task.date}}
+        </mat-card-subtitle>
+      </mat-card-title-group>
+      <button mat-button mat-raised
+        color="primary"
+        [routerLink]="['/home/edit', task.id]">
+          <mat-icon>edit</mat-icon>
+          Editar
+      </button>
+    </mat-card-header>
+  </mat-card>
+
+  <mat-expansion-panel hideToggle [ngClass]="colorCardBody">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{task.creator}}
+      </mat-panel-title>
+      <mat-panel-description>
+        Tipo de tarea: {{task.typeTask}} <mat-icon>{{task.typeTask! | priorityIcon}}</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>{{task.description}}</p>
+  </mat-expansion-panel>
+</div>
