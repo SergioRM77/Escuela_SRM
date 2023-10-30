@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@nestjs/jwt": "^10.1.1",
+    "bcryptjs": "^2.4.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "sweetalert2": "^11.7.32"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.5"
+  }
+}
