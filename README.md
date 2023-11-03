@@ -1,2 +1,2 @@
 # Escuela_SRM
-# Añadido nuevo contenido para segundo commit
+Ejercicios de sockets respuestas en tiempo real
